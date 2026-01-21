@@ -5,7 +5,7 @@ export const size = {
   height: 32,
 };
 
-export const contentType = "image/x-icon";
+export const contentType = "image/png";
 
 export default function Icon() {
   return new ImageResponse(
@@ -21,6 +21,7 @@ export default function Icon() {
           justifyContent: "center",
           color: "white",
           fontWeight: "bold",
+          borderRadius: "4px",
         }}
       >
         ₿
