@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 12%;
+    --border: 0 0% 90%;
+    --primary: 174 42% 41%;
+    --primary-foreground: 0 0% 100%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Custom styles to match original */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-proxima-nova), system-ui, sans-serif;
+}
+
+.font-serif {
+  font-family: var(--font-adobe-garamond), Georgia, serif;
+}
+
+/* Navigation styles */
+.nav-link {
+  @apply text-sm font-medium text-gray-700 hover:text-primary transition-colors duration-200;
+}
+
+.nav-link-active {
+  @apply text-primary;
+}
+
+/* Button styles */
+.btn-primary {
+  @apply inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-white bg-primary hover:bg-primary-dark transition-colors duration-200 rounded-full;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-primary border-2 border-primary hover:bg-primary hover:text-white transition-colors duration-200 rounded-full;
+}
+
+/* Section spacing */
+.section-padding {
+  @apply py-16 md:py-24;
+}
+
+/* Container */
+.container-custom {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
