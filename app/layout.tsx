@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { Proxima_Nova, Adobe_Garamond_Pro } from "next/font/google";
+import { Inter, EB_Garamond } from "next/font/google";
 import "./globals.css";
 
-const proximaNova = Proxima_Nova({
+// Proxima Nova substitute: Inter (similar geometric sans-serif)
+const inter = Inter({
   weight: ["300", "400", "600", "700"],
   style: ["normal", "italic"],
   subsets: ["latin"],
@@ -10,7 +11,8 @@ const proximaNova = Proxima_Nova({
   display: "swap",
 });
 
-const adobeGaramond = Adobe_Garamond_Pro({
+// Adobe Garamond Pro substitute: EB Garamond (similar classic serif)
+const ebGaramond = EB_Garamond({
   weight: ["400", "700"],
   style: ["normal", "italic"],
   subsets: ["latin"],
@@ -42,7 +44,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en-GB">
-      <body className={`${proximaNova.variable} ${adobeGaramond.variable} font-sans antialiased`}>
+      <body className={`${inter.variable} ${ebGaramond.variable} font-sans antialiased`}>
         {children}
       </body>
     </html>
